@@ -52,12 +52,12 @@ function Home() {
         // console.log(" reponse reçu 🎉")
         console.log(data)
 
-        const tableauMoviesModifOverview = data.tableauMovies.map((elem,i)=>{
+        const tableauMoviesModifOverview = data.movies.map((elem,i)=>{
           const overviewCourte = (elem.overview.length < 250) ? elem.overview : elem.overview.substring(0,250)
           elem.overview = overviewCourte
         })
 
-        moviesTableauSetter(data.tableauMovies)
+        moviesTableauSetter(data.movies)
 
       })
   }, []//<--- tableaux vide 

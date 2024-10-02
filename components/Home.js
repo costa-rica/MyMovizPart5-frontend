@@ -45,7 +45,7 @@ function Home() {
 
   useEffect(() => { // <-- que une seul fois, quand le composant arriver
     // console.log('Mount 🚀🚀🚀');
-    fetch('https://my-moviz-part5-backend-flax.vercel.app/movies')
+    fetch('http://localhost:3000/movies')
       .then(response => response.json())
       .then(data =>{
 
@@ -70,7 +70,7 @@ function Home() {
     // console.log(`dedans moviesTableau: ${i}`)
     // console.log(`dedans moviesTableau : ${i}`)
     const isLiked = likedMovies.some(movie => movie === data.title);
-    return <Movie key={i} updateLikedMovies={updateLikedMovies} isLiked={isLiked} title={data.title} overview={data.overview} poster={data.poster} voteAverage={data.voteAverage} voteCount={data.voteCount} />;
+    return <Movie key={i} updateLikedMovies={updateLikedMovies} isLiked={isLiked} title={data.title} overview={data.overview} poster={data.poster_path} voteAverage={data.vote_average} voteCount={data.vote_count} />;
   });
 
   return (

@@ -45,7 +45,7 @@ function Home() {
 
   useEffect(() => { // <-- que une seul fois, quand le composant arriver
     // console.log('Mount 🚀🚀🚀');
-    fetch('http://localhost:3000/movies')
+    fetch('https://my-moviz-part5-backend-flax.vercel.app/movies')
       .then(response => response.json())
       .then(data =>{
 
